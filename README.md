@@ -1,6 +1,6 @@
 
 Run project
 
-```poetry run blupipy joao```
+```blupipy start fastapi```
 
 

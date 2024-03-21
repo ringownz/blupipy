@@ -52,7 +52,7 @@ def start(
             f.writelines(answers_to_write)
 
         # Start Setup
-        cmd = ['make -C', './blueprints/project_template_fastapi', 'init', 'create', 'clean']
+        cmd = ['make -C ./blueprints/project_template_fastapi', 'init', 'create', 'clean']
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE)
         process.wait()
 

@@ -1,5 +1,6 @@
 # Cookiecutter specific
 data/*
+blueprints/project_template_fastapi/projects/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

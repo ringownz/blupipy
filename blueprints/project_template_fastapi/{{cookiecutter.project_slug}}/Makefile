@@ -7,19 +7,11 @@ ifeq ($(TIMEOUT),)
 TIMEOUT := 60
 endif
 
-ifeq ($(MODEL_PATH),)
-MODEL_PATH := {{cookiecutter.machine_learn_model_path}}
-endif
-
-ifeq ($(MODEL_NAME),)
-MODEL_NAME := {{cookiecutter.machine_learn_model_name}}
-endif
-
 # Target section and Global definitions
 # -----------------------------------------------------------------------------
 .PHONY: all clean test install run deploy down
 
-all: clean test install run deploy down
+all: clean test install run up down
 
 test:
 	poetry run pytest tests -vv --show-capture=all
@@ -32,7 +24,7 @@ install: generate_dot_env
 run:
 	PYTHONPATH=app/ poetry run uvicorn main:app --reload --host 0.0.0.0 --port 8080
 
-deploy: generate_dot_env
+up: generate_dot_env
 	docker-compose build
 	docker-compose up -d
 
