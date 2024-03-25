@@ -29,6 +29,10 @@ make install
 
 `make test`
 
+## Access API
+
+> <http://localhost:8080/api>
+
 ## Access Swagger Documentation
 
 > <http://localhost:8080/docs>
@@ -40,3 +44,12 @@ make install
 ## Project structure
 
 Files related to application are in the `app` or `tests` directories.
+
+
+{%- if cookiecutter.ruff == "true" -%}
+
+## Ruff Checks
+
+> poetry run ruff check .
+
+{% endif %}

@@ -5,8 +5,7 @@ description = ""
 authors = ["Joao Ribeiro <joao.martins.ribeiro@devoteam.com>"]
 readme = "README.md"
 packages = [
-    {include = "./src/"},
-    {include = "./blueprints/"},
+    {include = "./src/"}
 ]
 
 [tool.poetry.dependencies]
@@ -14,7 +13,7 @@ python = "^3.12"
 typer = {extras = ["all"], version = "^0.9.0"}
 
 [tool.poetry.scripts]
-blupipy = "src.app:start"
+blupipy = "src.main:app"
 
 [build-system]
 requires = ["poetry-core"]
